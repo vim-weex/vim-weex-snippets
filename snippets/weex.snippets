@@ -1,0 +1,100 @@
+snippet weex 
+	<template>
+	  ${1}
+	</template>
+	<script>
+	/**
+	 * 
+	 * Author: `system("git config --global -l|grep 'user.name'|cut -d '=' -f 2")`(`system("git config --global -l|grep 'user.email'|cut -d '=' -f 2")`)
+	 *
+	 * Copyright (c) `system("date +%Y")` , Alibaba, Inc. All rights reserved. 
+	 *
+	 * Filename `expand("%:t")`
+	 *
+	 * Since: `system("date +%Y/%m/%d")`
+	 *
+	 * Description: 
+	 *
+	 */
+	var modal = require('@weex-module/modal');
+	var stream = require('@weex-module/stream');
+	var animation = require('@weex-module/animation');
+	var dom = require('@weex-module/dom');
+	module.exports = {
+	  data: {},
+	  init: function () {},
+	  created: function () {},
+	  ready: function () {},
+	  methods: function () {}
+	}
+	</script>
+
+	<style>
+	/* Add style to here */
+	</style>
+snippet weam
+	animation.transition(this.$el('${1}'), {
+	  styles: {
+	    ${2}
+		},
+		duration: 0.1,
+		timingFunction: 'linear',
+		delay: 0
+	},function () {
+	});
+snippet westream
+	stream.fetch({
+	  method: 'GET',
+		url: '${1}',
+		type: this.$getConfig().env.platform.toLowerCase() === 'web' ? 'jsonp':'json'
+	}, function (response) {
+	  if (response.status == 200) {
+		
+		} else {
+		
+		}
+	});
+snippet wertrip 
+	//按需加载，旅行LX
+	if(env.appName === 'LX'){
+	  nav = require('@weex-module/tripNavigator');
+	  var mtop  = require('@weex-module/mtop');
+
+	  sendMtop  = mtop.sendMtop;
+	  mtopContext = mtop;
+
+	  userTrack= require('@weex-module/userTrack');
+
+	  //手淘TB等其他
+	}else{
+	  nav = require('@weex-module/navigator');
+
+	  sendMtop  = this.$sendMtop;
+	  mtopContext = this;
+	}
+snippet welog 
+	nativeLog(${1});
+snippet weconf 
+	this.$getConfig().${1}
+snippet wetoast
+	modal.toast({message:'${1}', duration:${2:3}});
+snippet wemtop
+	var options  = {
+	  api: '${1}',
+	  v: '1.0',
+	  param: {}
+	};
+	sendMtop.call(mtopContext, options, function(response){
+	});
+snippet welist
+	<list class="${1}">
+	  <cell></cell>
+	</list>
+snippet wecell
+	<cell>
+	  ${1}
+	</cell>
+snippet wetext
+	<text>${1}</text>
+snippet we$el
+	this.$el('${1}');
