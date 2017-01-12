@@ -31,7 +31,7 @@ Bundle "honza/vim-snippets"
 ```
 ####Ultisnips
 
-If you prefer to use `vim-react-snippets` with `Ultisnips`, put this in your .vimrc 
+If you prefer to use `vim-weex-snippets` with `Ultisnips`, put this in your .vimrc 
 to install using Vundle
 
 ````
@@ -59,6 +59,7 @@ expanding to
 
 ```
 <template>
+  _
 </template>
 
 <script>
@@ -66,9 +67,17 @@ var modal   = require('@weex-module/modal');
 var stream    = require('@weex-module/stream');
 var animation = require('@weex-module/animation');
 var dom         = require('@weex-module/dom');
+module.exports = {
+  data: {},
+  init: function () {},
+  created: function () {},
+  ready: function () {},
+  methods: function () {}
+}
 </script>
 
 <style>
+/* Add style to here */
 </style>
 ```
 
