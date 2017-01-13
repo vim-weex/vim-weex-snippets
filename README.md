@@ -1,7 +1,7 @@
 vim-weex-snippets
 ==================
 
-A set of snippets for Vim to work with Alibaba's [Weex](http://github.com/weex/) library.
+A set of snippets for Vim to work with Alibaba's [Weex](http://github.com/alibaba/weex/) library.
 
 Requires [vim-snipmate](https://github.com/garbas/vim-snipmate) or [Ultisnips](https://github.com/SirVer/ultisnips).
 
