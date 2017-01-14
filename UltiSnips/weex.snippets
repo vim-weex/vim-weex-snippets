@@ -110,9 +110,30 @@ endsnippet
 snippet wetext "Add text to context" b
 	<text>${1}</text>
 endsnippet
+snippet weimg "Add image to context" b
+	<image src="${1}"></image>
+endsnippet
 snippet we$el "Add $el to context"
 	this.$el('${1}');
 endsnippet
-
-
+snippet we$on "Add $on to context"
+	this.$on('${1}', function (e) {
+	  ${2}
+	});
+endsnippet
+snippet we$off "Add $on to context"
+	this.$off('${1}', function (e) {
+	  ${2}
+	});
+endsnippet
+snippet we$dp "Add $dispatch to context"
+	this.$dispatch('${1}', {
+	  ${2}
+	});
+endsnippet
+snippet we$dp "Add $dispatch to context"
+	this.$dispatch('${1}', {
+	  ${2}
+	});
+endsnippet
 
